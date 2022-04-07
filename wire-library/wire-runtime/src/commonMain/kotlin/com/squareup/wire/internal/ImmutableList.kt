@@ -17,9 +17,9 @@ package com.squareup.wire.internal
 
 import kotlin.jvm.JvmName
 
-internal class ImmutableList<T>(list: List<T>) : AbstractList<T?>(), RandomAccess, Serializable {
-  private val list = ArrayList(list)
-
+class ImmutableList<T> private constructor(
+  private val list: ArrayList<T>,
+) : AbstractList<T>(), RandomAccess, Serializable {
   override val size: Int
     @get:JvmName("size") get() = list.size
 
@@ -31,4 +31,18 @@ internal class ImmutableList<T>(list: List<T>) : AbstractList<T?>(), RandomAcces
 
   @Throws(ObjectStreamException::class)
   private fun writeReplace(): Any = list.toUnmodifiableList()
+
+  companion object {
+    private val empty = ImmutableList<Unit>(ArrayList())
+    fun <T> empty(): ImmutableList<T> = empty as ImmutableList<T>
+
+    /** Returns an immutable list with the same contents as [list]. */
+    fun <T> copyOf(list: List<T>): ImmutableList<T> = ImmutableList(ArrayList(list))
+
+    /**
+     * Returns an [ImmutableList] that doesn't perform a defensive copy of [list] and instead just
+     * wraps it. This should not be used outside of Wire's own internal codegen.
+     */
+    fun <T> wrapUnsafe(list: ArrayList<T>): ImmutableList<T> = ImmutableList(list)
+  }
 }

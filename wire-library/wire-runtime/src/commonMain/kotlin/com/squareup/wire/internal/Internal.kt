@@ -24,7 +24,7 @@ import kotlin.jvm.JvmName
 
 // Methods for generated code use only. Not subject to public API rules.
 
-fun <T> newMutableList(): MutableList<T> = MutableOnWriteList(emptyList())
+fun <T> newMutableList(): MutableList<T> = MutableOnWriteList(ImmutableList.empty())
 
 fun <K, V> newMutableMap(): MutableMap<K, V> = LinkedHashMap()
 
@@ -35,8 +35,10 @@ fun <K, V> newMutableMap(): MutableMap<K, V> = LinkedHashMap()
 fun <T> copyOf(name: String, list: List<T>?): MutableList<T> = copyOf(list!!)
 
 fun <T> copyOf(list: List<T>): MutableList<T> {
-  return if (list === emptyList<T>() || list is ImmutableList<*>) {
+  return if (list is ImmutableList) {
     MutableOnWriteList(list)
+  } else if (list === emptyList<T>()) {
+    MutableOnWriteList(ImmutableList.empty())
   } else {
     ArrayList(list)
   }
@@ -58,10 +60,10 @@ fun <T> immutableCopyOf(name: String, list: List<T>): List<T> {
   if (list === emptyList<T>() || list is ImmutableList<*>) {
     return list
   }
-  val result = ImmutableList(list)
+  val result = ImmutableList.copyOf(list)
   // Check after the list has been copied to defend against races.
-  require(null !in result) { "$name.contains(null)" }
-  return result as List<T>
+  require(null !in (list as List<T?>)) { "$name.contains(null)" }
+  return result
 }
 
 fun <K, V> immutableCopyOf(name: String, map: Map<K, V>): Map<K, V> {

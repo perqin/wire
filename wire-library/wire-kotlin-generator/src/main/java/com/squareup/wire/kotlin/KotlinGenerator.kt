@@ -102,11 +102,11 @@ import com.squareup.wire.schema.internal.eligibleAsAnnotationMember
 import com.squareup.wire.schema.internal.javaPackage
 import com.squareup.wire.schema.internal.optionValueToInt
 import com.squareup.wire.schema.internal.optionValueToLong
+import java.util.Locale
 import kotlinx.coroutines.channels.ReceiveChannel
 import kotlinx.coroutines.channels.SendChannel
 import okio.ByteString
 import okio.ByteString.Companion.encode
-import java.util.Locale
 
 class KotlinGenerator private constructor(
   val schema: Schema,
@@ -1555,7 +1555,7 @@ class KotlinGenerator private constructor(
           is Field -> {
             val fieldName = nameAllocator[fieldOrOneOf]
 
-            val throwExceptionBlock =
+            val suffix =
               if (!fieldOrOneOf.isRepeated && !fieldOrOneOf.isMap && fieldOrOneOf.isRequired) {
                 CodeBlock.of(
                   " ?: throw %1M(%2L, %3S)",
@@ -1563,11 +1563,13 @@ class KotlinGenerator private constructor(
                   fieldName,
                   fieldOrOneOf.name
                 )
+              } else if (fieldOrOneOf.isRepeated) {
+                CodeBlock.of(".toImmutableListUnsafe()")
               } else {
                 CodeBlock.of("")
               }
 
-            addStatement("%1L = %1L%2L,", fieldName, throwExceptionBlock)
+            addStatement("%1L = %1L%2L,", fieldName, suffix)
           }
           is OneOf -> {
             val fieldName = nameAllocator[fieldOrOneOf]
@@ -2077,7 +2079,9 @@ class KotlinGenerator private constructor(
   }
 
   private fun Field.getDeclaration(allocatedName: String) = when {
-    isRepeated -> CodeBlock.of("val $allocatedName = mutableListOf<%T>()", type!!.typeName)
+    isRepeated -> CodeBlock.of("val $allocatedName = %T<%T>()",
+      ClassName("com.squareup.wire.internal", "MutableOnWriteList"),
+      type!!.typeName)
     isMap -> CodeBlock.of(
       "val $allocatedName = mutableMapOf<%T, %T>()",
       keyType.typeName, valueType.typeName

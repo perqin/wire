@@ -18,10 +18,23 @@ package com.squareup.wire.internal
 import kotlin.jvm.JvmName
 
 /** A wrapper around an empty/immutable list which only switches to mutable on first mutation. */
-internal class MutableOnWriteList<T>(
-  private val immutableList: List<T>
+class MutableOnWriteList<T>(
+  private val immutableList: ImmutableList<T>
 ) : AbstractMutableList<T>(), RandomAccess, Serializable {
+  constructor() : this(ImmutableList.empty())
+
   internal var mutableList: List<T> = immutableList
+
+  /**
+   * Freezes this list for further modification and returns an ImmutableList with its current
+   * elements. It is an error to mutate this list after calling this method.
+   */
+  fun toImmutableListUnsafe(): List<T> {
+    return when (val list = mutableList) {
+      is ImmutableList -> return list
+      else -> ImmutableList.wrapUnsafe(list as ArrayList<T>)
+    }
+  }
 
   override fun get(index: Int): T = mutableList[index]
 
