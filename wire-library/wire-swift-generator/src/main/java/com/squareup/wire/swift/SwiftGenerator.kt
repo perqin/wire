@@ -315,11 +315,11 @@ class SwiftGenerator private constructor(
 
       if (redactionExtension != null) {
         redactionExtension.addProperty(
-          PropertySpec.varBuilder("description", STRING)
+          PropertySpec.varBuilder("description_", STRING)
             .addModifiers(PUBLIC)
             .getter(
               FunctionSpec.getterBuilder()
-                .addStatement("return %N.description", storageName)
+                .addStatement("return %N.description_", storageName)
                 .build()
             )
             .build()
