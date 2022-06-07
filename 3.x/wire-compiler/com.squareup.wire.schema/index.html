@@ -407,7 +407,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../wire-schema/com.squareup.wire/index.md" class="md-nav__link">
+      <a href="../../wire-schema/com.squareup.wire/" class="md-nav__link">
         wire-schema
       </a>
     </li>
@@ -657,12 +657,8 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="-custom-handler-beta/">CustomHandlerBeta</a></td>
-<td>[jvm]<br>interface <a href="-custom-handler-beta/">CustomHandlerBeta</a><br>Implementations of this interface must have a no-arguments public constructor.</td>
-</tr>
-<tr>
-<td><a href="-custom-target-beta/">CustomTargetBeta</a></td>
-<td>[jvm]<br>data class <a href="-custom-target-beta/">CustomTargetBeta</a>(includes: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a>&lt;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>&gt;, excludes: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a>&lt;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>&gt;, exclusive: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a>, outDirectory: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>, customHandler: <a href="-custom-handler-beta/">CustomHandlerBeta</a>) : <a href="-target/">Target</a><br>Generate something custom defined by an external class.</td>
+<td><a href="-custom-target/">CustomTarget</a></td>
+<td>[jvm]<br>data class <a href="-custom-target/">CustomTarget</a>(includes: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a>&lt;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>&gt;, excludes: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a>&lt;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>&gt;, exclusive: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a>, outDirectory: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>, schemaHandlerFactory: SchemaHandler.Factory) : <a href="-target/">Target</a></td>
 </tr>
 <tr>
 <td><a href="-java-target/">JavaTarget</a></td>
@@ -673,16 +669,8 @@
 <td>[jvm]<br>data class <a href="-kotlin-target/">KotlinTarget</a>(includes: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a>&lt;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>&gt;, excludes: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a>&lt;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>&gt;, exclusive: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a>, outDirectory: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>, android: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a>, javaInterop: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a>, emitDeclaredOptions: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a>, emitAppliedOptions: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a>, rpcCallStyle: RpcCallStyle, rpcRole: RpcRole, singleMethodServices: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a>, boxOneOfsMinSize: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a>, grpcServerCompatible: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a>, nameSuffix: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>?) : <a href="-target/">Target</a><br>Generate .kt sources.</td>
 </tr>
 <tr>
-<td><a href="-profile-loader/">ProfileLoader</a></td>
-<td>[jvm]<br>interface <a href="-profile-loader/">ProfileLoader</a></td>
-</tr>
-<tr>
 <td><a href="-proto-target/">ProtoTarget</a></td>
 <td>[jvm]<br>data class <a href="-proto-target/">ProtoTarget</a>(outDirectory: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>) : <a href="-target/">Target</a></td>
-</tr>
-<tr>
-<td><a href="-schema-loader/">SchemaLoader</a></td>
-<td>[jvm]<br>class <a href="-schema-loader/">SchemaLoader</a> : Loader, <a href="-profile-loader/">ProfileLoader</a><br>Load proto files and their transitive dependencies and parse them. Keep track of which files were loaded from where so that we can use that information later when deciding what to generate.</td>
 </tr>
 <tr>
 <td><a href="-swift-target/">SwiftTarget</a></td>
@@ -708,8 +696,8 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="new-custom-handler/">newCustomHandler</a></td>
-<td>[jvm]<br>fun <a href="new-custom-handler/">newCustomHandler</a>(customHandlerClass: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>): <a href="-custom-handler-beta/">CustomHandlerBeta</a><br>Create and return an instance of <a href="new-custom-handler/">customHandlerClass</a>.</td>
+<td><a href="new-schema-handler/">newSchemaHandler</a></td>
+<td>[jvm]<br>fun <a href="new-schema-handler/">newSchemaHandler</a>(schemaHandlerFactoryClass: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>): SchemaHandler.Factory<br>Create and return an instance of SchemaHandler.Factory.</td>
 </tr>
 </tbody>
 </table>

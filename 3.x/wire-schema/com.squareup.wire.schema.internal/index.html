@@ -407,7 +407,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../com.squareup.wire/index.md" class="md-nav__link">
+      <a href="../com.squareup.wire/" class="md-nav__link">
         wire-schema
       </a>
     </li>
@@ -665,8 +665,20 @@
 <td>[common, js, jvm]<br>[common, js]<br>interface <a href="-mutable-queue/">MutableQueue</a>&lt;<a href="-mutable-queue/">T</a> : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a>&gt; : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-collection/index.html">MutableCollection</a>&lt;<a href="-mutable-queue/">T</a>&gt; <br>[jvm]<br>typealias <a href="-mutable-queue/">MutableQueue</a> = <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Queue.html">Queue</a>&lt;<a href="-mutable-queue/">T</a>&gt;</td>
 </tr>
 <tr>
+<td><a href="-profile-file-element/">ProfileFileElement</a></td>
+<td>[common]<br>data class <a href="-profile-file-element/">ProfileFileElement</a>(location: <a href="../com.squareup.wire.schema/-location/">Location</a>, packageName: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>?, imports: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a>&lt;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>&gt;, typeConfigs: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a>&lt;<a href="-type-config-element/">TypeConfigElement</a>&gt;)<br>A single .wire file. This file is structured similarly to a .proto file, but with different elements.</td>
+</tr>
+<tr>
+<td><a href="-profile-parser/">ProfileParser</a></td>
+<td>[common]<br>class <a href="-profile-parser/">ProfileParser</a>(location: <a href="../com.squareup.wire.schema/-location/">Location</a>, data: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>)<br>Parses .wire files.</td>
+</tr>
+<tr>
 <td><a href="-schema-encoder/">SchemaEncoder</a></td>
 <td>[common]<br>class <a href="-schema-encoder/">SchemaEncoder</a>(schema: <a href="../com.squareup.wire.schema/-schema/">Schema</a>)<br>This class encodes files from a Wire schema using the types in protobuf&rsquo;s descriptor.proto. Unfortunately, the two models don&rsquo;t line up directly:</td>
+</tr>
+<tr>
+<td><a href="-type-config-element/">TypeConfigElement</a></td>
+<td>[common]<br>data class <a href="-type-config-element/">TypeConfigElement</a>(location: <a href="../com.squareup.wire.schema/-location/">Location</a>, type: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>?, documentation: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>, with: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a>&lt;<a href="../com.squareup.wire.schema.internal.parser/-option-element/">OptionElement</a>&gt;, target: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>?, adapter: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>?)<br>Configures how Wire will generate code for a specific type. This configuration belongs in a build.wire file that is in the same directory as the configured type.</td>
 </tr>
 <tr>
 <td><a href="-type-mover/">TypeMover</a></td>

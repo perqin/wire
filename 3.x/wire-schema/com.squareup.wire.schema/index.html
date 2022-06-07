@@ -407,7 +407,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../com.squareup.wire/index.md" class="md-nav__link">
+      <a href="../com.squareup.wire/" class="md-nav__link">
         wire-schema
       </a>
     </li>
@@ -620,6 +620,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    Properties
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -650,8 +664,16 @@
 </thead>
 <tbody>
 <tr>
+<td><a href="-adapter-constant/">AdapterConstant</a></td>
+<td>[jvm]<br>data class <a href="-adapter-constant/">AdapterConstant</a>(javaClassName: ClassName, kotlinClassName: ClassName, memberName: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>)<br>A constant field that identifies a ProtoAdapter. This should be a string like like com.squareup.dinosaurs.Dinosaur#ADAPTER with a fully qualified class name, a #, and a field name.</td>
+</tr>
+<tr>
 <td><a href="-claimed-definitions/">ClaimedDefinitions</a></td>
-<td>[jvm]<br>class <a href="-claimed-definitions/">ClaimedDefinitions</a></td>
+<td>[common]<br>class <a href="-claimed-definitions/">ClaimedDefinitions</a><br><a href="-claimed-definitions/">ClaimedDefinitions</a> tracks handled objects: <a href="-type/">Type</a>s, <a href="-service/">Service</a>s, and <a href="-field/">Field</a>s. A <a href="-schema-handler/">SchemaHandler</a> is to first check if an object has already been claimed; if yes, it is not to handle it. Otherwise, the <a href="-schema-handler/">SchemaHandler</a> is to handle the object and <a href="-claimed-definitions/claim/">claim</a> it. It is an error for a <a href="-schema-handler/">SchemaHandler</a> to handle an object which has already been claimed.</td>
+</tr>
+<tr>
+<td><a href="-claimed-paths/">ClaimedPaths</a></td>
+<td>[common]<br>class <a href="-claimed-paths/">ClaimedPaths</a><br><a href="-claimed-paths/">ClaimedPaths</a> tracks generated files&rsquo; Paths. <a href="-schema-handler/">Schema handlers</a> who generate files are to <a href="-claimed-paths/claim/">claim</a> each generated file&rsquo;s path. It is an error to generate different <a href="-type/">Type</a>s or <a href="-service/">Service</a>s to the same file and <a href="-claimed-paths/">ClaimedPaths</a> will throw when generation conflicts happen.</td>
 </tr>
 <tr>
 <td><a href="-core-loader/">CoreLoader</a></td>
@@ -659,7 +681,7 @@
 </tr>
 <tr>
 <td><a href="-emitting-rules/">EmittingRules</a></td>
-<td>[jvm]<br>class <a href="-emitting-rules/">EmittingRules</a><br>A set of rules that describes which types to generate.</td>
+<td>[common]<br>class <a href="-emitting-rules/">EmittingRules</a><br>A set of rules that describes which types to generate.</td>
 </tr>
 <tr>
 <td><a href="-enclosing-type/">EnclosingType</a></td>
@@ -726,6 +748,14 @@
 <td>[common]<br>class <a href="-options/">Options</a>(optionType: <a href="-proto-type/">ProtoType</a>, optionElements: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a>&lt;<a href="../com.squareup.wire.schema.internal.parser/-option-element/">OptionElement</a>&gt;)<br>A set of options declared on a message declaration, field declaration, enum declaration, enum constant declaration, service declaration, RPC method declaration, or proto file declaration. Options values may be arbitrary protocol buffer messages, but must be valid protocol buffer messages.</td>
 </tr>
 <tr>
+<td><a href="-profile/">Profile</a></td>
+<td>[common, js]<br>[common]<br>class <a href="-profile/">Profile</a>(profileFiles: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a>&lt;<a href="../com.squareup.wire.schema.internal/-profile-file-element/">ProfileFileElement</a>&gt;)<br>[js]<br>class <a href="-profile/">Profile</a>(profileFiles: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a>&lt;ProfileFileElement&gt;)<br>[jvm]<br>class <a href="-profile/">Profile</a>(profileFiles: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a>&lt;ProfileFileElement&gt;)<br>Describes how to map .proto to .java. A single repository of .proto files may have multiple profiles; for example a project may target both Android and Java.</td>
+</tr>
+<tr>
+<td><a href="-profile-loader/">ProfileLoader</a></td>
+<td>[common]<br>interface <a href="-profile-loader/">ProfileLoader</a></td>
+</tr>
+<tr>
 <td><a href="-proto-file/">ProtoFile</a></td>
 <td>[common]<br>data class <a href="-proto-file/">ProtoFile</a>(location: <a href="-location/">Location</a>, imports: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a>&lt;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>&gt;, publicImports: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a>&lt;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>&gt;, packageName: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>?, types: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a>&lt;<a href="-type/">Type</a>&gt;, services: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a>&lt;<a href="-service/">Service</a>&gt;, extendList: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a>&lt;<a href="-extend/">Extend</a>&gt;, options: <a href="-options/">Options</a>, syntax: Syntax?)</td>
 </tr>
@@ -762,6 +792,14 @@
 <td>[common]<br>class <a href="-schema-exception/">SchemaException</a>(errors: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a>&lt;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>&gt;) : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-runtime-exception/index.html">RuntimeException</a></td>
 </tr>
 <tr>
+<td><a href="-schema-handler/">SchemaHandler</a></td>
+<td>[common]<br>abstract class <a href="-schema-handler/">SchemaHandler</a><br>A <a href="-schema-handler/handle/">SchemaHandler</a>s <a href="-schema/">Schema</a>!</td>
+</tr>
+<tr>
+<td><a href="-schema-loader/">SchemaLoader</a></td>
+<td>[common]<br>class <a href="-schema-loader/">SchemaLoader</a> : <a href="-loader/">Loader</a>, <a href="-profile-loader/">ProfileLoader</a><br>Load proto files and their transitive dependencies and parse them. Keep track of which files were loaded from where so that we can use that information later when deciding what to generate.<br>[js, jvm]<br>[js, jvm]<br>class <a href="-schema-loader/">SchemaLoader</a> : Loader, ProfileLoader</td>
+</tr>
+<tr>
 <td><a href="-service/">Service</a></td>
 <td>[common]<br>data class <a href="-service/">Service</a>(type: <a href="-proto-type/">ProtoType</a>, location: <a href="-location/">Location</a>, documentation: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>, name: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>, rpcs: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a>&lt;<a href="-rpc/">Rpc</a>&gt;, options: <a href="-options/">Options</a>)</td>
 </tr>
@@ -771,7 +809,37 @@
 </tr>
 <tr>
 <td><a href="-type/">Type</a></td>
-<td>[common]<br>abstract class <a href="-type/">Type</a></td>
+<td>[common]<br>sealed class <a href="-type/">Type</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="is-wire-runtime-proto/">isWireRuntimeProto</a></td>
+<td>[common]<br>fun <a href="is-wire-runtime-proto/">isWireRuntimeProto</a>(location: <a href="-location/">Location</a>): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><br>[common]<br>fun <a href="is-wire-runtime-proto/">isWireRuntimeProto</a>(path: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><br>Returns true if <a href="is-wire-runtime-proto/">path</a> is bundled in the wire runtime.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="-w-i-r-e_-r-u-n-t-i-m-e_-j-a-r/">WIRE_RUNTIME_JAR</a></td>
+<td>[common]<br>const val <a href="-w-i-r-e_-r-u-n-t-i-m-e_-j-a-r/">WIRE_RUNTIME_JAR</a>: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><br>A special base directory used for Wire&rsquo;s built-in .proto files.</td>
 </tr>
 </tbody>
 </table>

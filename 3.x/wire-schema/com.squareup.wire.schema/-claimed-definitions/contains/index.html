@@ -407,7 +407,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../com.squareup.wire/index.md" class="md-nav__link">
+      <a href="../../../com.squareup.wire/" class="md-nav__link">
         wire-schema
       </a>
     </li>
@@ -625,12 +625,16 @@
 
 <p>//<a href="../../../../">wire-schema</a>/<a href="../../">com.squareup.wire.schema</a>/<a href="../">ClaimedDefinitions</a>/<a href="./">contains</a></p>
 <h1 id="contains">contains<a class="headerlink" href="#contains" title="Permanent link">&para;</a></h1>
-<p>[jvm]\
-operator fun <a href="./">contains</a>(type: ProtoType): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></p>
-<p>operator fun <a href="./">contains</a>(member: ProtoMember): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></p>
-<p>operator fun <a href="./">contains</a>(type: Type): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></p>
-<p>operator fun <a href="./">contains</a>(service: Service): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></p>
-<p>operator fun <a href="./">contains</a>(field: Field): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></p>
+<p>[common]\
+operator fun <a href="./">contains</a>(type: <a href="../../-proto-type/">ProtoType</a>): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></p>
+<p>operator fun <a href="./">contains</a>(type: <a href="../../-type/">Type</a>): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></p>
+<p>Returns true if <a href="./">type</a> has already been handled.</p>
+<p>[common]\
+operator fun <a href="./">contains</a>(member: <a href="../../-proto-member/">ProtoMember</a>): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></p>
+<p>Returns true if <a href="./">member</a> has already been handled.</p>
+<p>[common]\
+operator fun <a href="./">contains</a>(service: <a href="../../-service/">Service</a>): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></p>
+<p>Returns true if <a href="./">service</a> has already been handled.</p>
 
               
             </article>

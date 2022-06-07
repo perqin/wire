@@ -407,7 +407,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../com.squareup.wire/index.md" class="md-nav__link">
+      <a href="../../../com.squareup.wire/" class="md-nav__link">
         wire-schema
       </a>
     </li>
@@ -625,12 +625,16 @@
 
 <p>//<a href="../../../../">wire-schema</a>/<a href="../../">com.squareup.wire.schema</a>/<a href="../">ClaimedDefinitions</a>/<a href="./">claim</a></p>
 <h1 id="claim">claim<a class="headerlink" href="#claim" title="Permanent link">&para;</a></h1>
-<p>[jvm]\
-fun <a href="./">claim</a>(type: ProtoType)</p>
-<p>fun <a href="./">claim</a>(member: ProtoMember)</p>
-<p>fun <a href="./">claim</a>(type: Type)</p>
-<p>fun <a href="./">claim</a>(service: Service)</p>
-<p>fun <a href="./">claim</a>(field: Field)</p>
+<p>[common]\
+fun <a href="./">claim</a>(type: <a href="../../-proto-type/">ProtoType</a>)</p>
+<p>fun <a href="./">claim</a>(type: <a href="../../-type/">Type</a>)</p>
+<p>Tracks that <a href="./">type</a> has been handled.</p>
+<p>[common]\
+fun <a href="./">claim</a>(member: <a href="../../-proto-member/">ProtoMember</a>)</p>
+<p>Tracks that <a href="./">member</a> has been handled.</p>
+<p>[common]\
+fun <a href="./">claim</a>(service: <a href="../../-service/">Service</a>)</p>
+<p>Tracks that <a href="./">service</a> has been handled.</p>
 
               
             </article>

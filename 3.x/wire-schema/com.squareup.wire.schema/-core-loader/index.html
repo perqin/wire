@@ -407,7 +407,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../com.squareup.wire/index.md" class="md-nav__link">
+      <a href="../../com.squareup.wire/" class="md-nav__link">
         wire-schema
       </a>
     </li>
@@ -620,13 +620,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#properties" class="md-nav__link">
-    Properties
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -667,31 +660,12 @@ object <a href="./">CoreLoader</a> : Loader</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="is-wire-runtime-proto/">isWireRuntimeProto</a></td>
-<td>[jvm]<br>fun <a href="is-wire-runtime-proto/">isWireRuntimeProto</a>(location: Location): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><br>[jvm]<br>fun <a href="is-wire-runtime-proto/">isWireRuntimeProto</a>(path: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><br>Returns true if <a href="is-wire-runtime-proto/">path</a> is bundled in the wire runtime.</td>
-</tr>
-<tr>
 <td>load</td>
 <td>[js, jvm, common]<br>[js]<br>open override fun <a href="%5Bjs%5Dload/">load</a>(path: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>): ProtoFile<br>[jvm]<br>open override fun <a href="%5Bjvm%5Dload/">load</a>(path: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>): ProtoFile<br>[common]<br>abstract fun <a href="../-loader/load/">load</a>(path: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>): <a href="../-proto-file/">ProtoFile</a></td>
 </tr>
 <tr>
 <td>withErrors</td>
 <td>[js]<br>open override fun <a href="%5Bjs%5Dwith-errors/">withErrors</a>(errors: ErrorCollector): <a href="./">CoreLoader</a><br>Returns a new loader that reports failures to <a href="%5Bjs%5Dwith-errors/">errors</a>.<br>[jvm]<br>open override fun <a href="%5Bjvm%5Dwith-errors/">withErrors</a>(errors: ErrorCollector): <a href="./">CoreLoader</a><br>Returns a new loader that reports failures to <a href="%5Bjvm%5Dwith-errors/">errors</a>.<br>[common]<br>abstract fun <a href="../-loader/with-errors/">withErrors</a>(errors: <a href="../-error-collector/">ErrorCollector</a>): <a href="../-loader/">Loader</a><br>Returns a new loader that reports failures to <a href="../-loader/with-errors/">errors</a>.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Summary</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="-w-i-r-e_-r-u-n-t-i-m-e_-j-a-r/">WIRE_RUNTIME_JAR</a></td>
-<td>[jvm]<br>const val <a href="-w-i-r-e_-r-u-n-t-i-m-e_-j-a-r/">WIRE_RUNTIME_JAR</a>: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><br>A special base directory used for Wire&rsquo;s built-in .proto files.</td>
 </tr>
 </tbody>
 </table>

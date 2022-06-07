@@ -407,7 +407,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../com.squareup.wire/index.md" class="md-nav__link">
+      <a href="../../com.squareup.wire/" class="md-nav__link">
         wire-schema
       </a>
     </li>
@@ -621,6 +621,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#constructors" class="md-nav__link">
+    Constructors
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#types" class="md-nav__link">
     Types
   </a>
@@ -661,7 +668,7 @@
 
 <p>//<a href="../../../">wire-schema</a>/<a href="../">com.squareup.wire.schema</a>/<a href="./">EmittingRules</a></p>
 <h1 id="emittingrules">EmittingRules<a class="headerlink" href="#emittingrules" title="Permanent link">&para;</a></h1>
-<p>[jvm]\
+<p>[common]\
 class <a href="./">EmittingRules</a></p>
 <p>A set of rules that describes which types to generate.</p>
 <p>Despite the builder, instances of this class are not safe for concurrent use.</p>
@@ -672,6 +679,21 @@ class <a href="./">EmittingRules</a></p>
 <p>Identifiers should not contain member names.</p>
 <p>This set has <em>included identifiers</em> and <em>excluded identifiers</em>, with the most precise identifier taking precedence over the other ones. For instance, if there is one included identifier a.Movie along an excluded identifier a.*, the type a.Movie is considered included in the set.</p>
 <p>If the includes set is empty, that implies that all elements should be included. Use this to exclude unwanted types and members without also including everything else.</p>
+<h2 id="constructors">Constructors<a class="headerlink" href="#constructors" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="-emitting-rules/">EmittingRules</a></td>
+<td>[common]<br>fun <a href="-emitting-rules/">EmittingRules</a>()</td>
+</tr>
+</tbody>
+</table>
 <h2 id="types">Types<a class="headerlink" href="#types" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -683,11 +705,11 @@ class <a href="./">EmittingRules</a></p>
 <tbody>
 <tr>
 <td><a href="-builder/">Builder</a></td>
-<td>[jvm]<br>class <a href="-builder/">Builder</a></td>
+<td>[common]<br>class <a href="-builder/">Builder</a></td>
 </tr>
 <tr>
 <td><a href="-companion/">Companion</a></td>
-<td>[jvm]<br>object <a href="-companion/">Companion</a></td>
+<td>[common]<br>object <a href="-companion/">Companion</a></td>
 </tr>
 </tbody>
 </table>
@@ -702,15 +724,15 @@ class <a href="./">EmittingRules</a></p>
 <tbody>
 <tr>
 <td><a href="includes/">includes</a></td>
-<td>[jvm]<br>fun <a href="includes/">includes</a>(type: ProtoType): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><br>Returns true if type should be generated.</td>
+<td>[common]<br>fun <a href="includes/">includes</a>(type: <a href="../-proto-type/">ProtoType</a>): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><br>Returns true if type should be generated.</td>
 </tr>
 <tr>
 <td><a href="unused-excludes/">unusedExcludes</a></td>
-<td>[jvm]<br>fun <a href="unused-excludes/">unusedExcludes</a>(): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-set/index.html">Set</a>&lt;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>&gt;</td>
+<td>[common]<br>fun <a href="unused-excludes/">unusedExcludes</a>(): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-set/index.html">Set</a>&lt;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>&gt;</td>
 </tr>
 <tr>
 <td><a href="unused-includes/">unusedIncludes</a></td>
-<td>[jvm]<br>fun <a href="unused-includes/">unusedIncludes</a>(): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-set/index.html">Set</a>&lt;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>&gt;</td>
+<td>[common]<br>fun <a href="unused-includes/">unusedIncludes</a>(): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-set/index.html">Set</a>&lt;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>&gt;</td>
 </tr>
 </tbody>
 </table>
@@ -725,7 +747,7 @@ class <a href="./">EmittingRules</a></p>
 <tbody>
 <tr>
 <td><a href="is-empty/">isEmpty</a></td>
-<td>[jvm]<br>val <a href="is-empty/">isEmpty</a>: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></td>
+<td>[common]<br>val <a href="is-empty/">isEmpty</a>: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></td>
 </tr>
 </tbody>
 </table>

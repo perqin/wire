@@ -407,7 +407,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../com.squareup.wire/index.md" class="md-nav__link">
+      <a href="../../com.squareup.wire/" class="md-nav__link">
         wire-schema
       </a>
     </li>
@@ -614,6 +614,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#constructors" class="md-nav__link">
+    Constructors
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#functions" class="md-nav__link">
     Functions
   </a>
@@ -640,8 +647,24 @@
 
 <p>//<a href="../../../">wire-schema</a>/<a href="../">com.squareup.wire.schema</a>/<a href="./">ClaimedDefinitions</a></p>
 <h1 id="claimeddefinitions">ClaimedDefinitions<a class="headerlink" href="#claimeddefinitions" title="Permanent link">&para;</a></h1>
-<p>[jvm]\
+<p>[common]\
 class <a href="./">ClaimedDefinitions</a></p>
+<p><a href="./">ClaimedDefinitions</a> tracks handled objects: <a href="../-type/">Type</a>s, <a href="../-service/">Service</a>s, and <a href="../-field/">Field</a>s. A <a href="../-schema-handler/">SchemaHandler</a> is to first check if an object has already been claimed; if yes, it is not to handle it. Otherwise, the <a href="../-schema-handler/">SchemaHandler</a> is to handle the object and <a href="claim/">claim</a> it. It is an error for a <a href="../-schema-handler/">SchemaHandler</a> to handle an object which has already been claimed.</p>
+<h2 id="constructors">Constructors<a class="headerlink" href="#constructors" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="-claimed-definitions/">ClaimedDefinitions</a></td>
+<td>[common]<br>fun <a href="-claimed-definitions/">ClaimedDefinitions</a>()</td>
+</tr>
+</tbody>
+</table>
 <h2 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -653,11 +676,11 @@ class <a href="./">ClaimedDefinitions</a></p>
 <tbody>
 <tr>
 <td><a href="claim/">claim</a></td>
-<td>[jvm]<br>fun <a href="claim/">claim</a>(field: Field)<br>fun <a href="claim/">claim</a>(member: ProtoMember)<br>fun <a href="claim/">claim</a>(type: ProtoType)<br>fun <a href="claim/">claim</a>(service: Service)<br>fun <a href="claim/">claim</a>(type: Type)</td>
+<td>[common]<br>fun <a href="claim/">claim</a>(member: <a href="../-proto-member/">ProtoMember</a>)<br>Tracks that <a href="claim/">member</a> has been handled.<br>[common]<br>fun <a href="claim/">claim</a>(type: <a href="../-proto-type/">ProtoType</a>)<br>fun <a href="claim/">claim</a>(type: <a href="../-type/">Type</a>)<br>Tracks that <a href="claim/">type</a> has been handled.<br>[common]<br>fun <a href="claim/">claim</a>(service: <a href="../-service/">Service</a>)<br>Tracks that <a href="claim/">service</a> has been handled.</td>
 </tr>
 <tr>
 <td><a href="contains/">contains</a></td>
-<td>[jvm]<br>operator fun <a href="contains/">contains</a>(field: Field): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><br>operator fun <a href="contains/">contains</a>(member: ProtoMember): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><br>operator fun <a href="contains/">contains</a>(type: ProtoType): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><br>operator fun <a href="contains/">contains</a>(service: Service): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><br>operator fun <a href="contains/">contains</a>(type: Type): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></td>
+<td>[common]<br>operator fun <a href="contains/">contains</a>(member: <a href="../-proto-member/">ProtoMember</a>): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><br>Returns true if <a href="contains/">member</a> has already been handled.<br>[common]<br>operator fun <a href="contains/">contains</a>(type: <a href="../-proto-type/">ProtoType</a>): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><br>operator fun <a href="contains/">contains</a>(type: <a href="../-type/">Type</a>): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><br>Returns true if <a href="contains/">type</a> has already been handled.<br>[common]<br>operator fun <a href="contains/">contains</a>(service: <a href="../-service/">Service</a>): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><br>Returns true if <a href="contains/">service</a> has already been handled.</td>
 </tr>
 </tbody>
 </table>

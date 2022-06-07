@@ -407,7 +407,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../wire-schema/com.squareup.wire/index.md" class="md-nav__link">
+      <a href="../../../wire-schema/com.squareup.wire/" class="md-nav__link">
         wire-schema
       </a>
     </li>
@@ -614,13 +614,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#types" class="md-nav__link">
-    Types
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#functions" class="md-nav__link">
     Functions
   </a>
@@ -663,21 +656,6 @@
 <h1 id="target">Target<a class="headerlink" href="#target" title="Permanent link">&para;</a></h1>
 <p>[jvm]\
 sealed class <a href="./">Target</a> : <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html">Serializable</a></p>
-<h2 id="types">Types<a class="headerlink" href="#types" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Summary</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="-schema-handler/">SchemaHandler</a></td>
-<td>[jvm]<br>interface <a href="-schema-handler/">SchemaHandler</a></td>
-</tr>
-</tbody>
-</table>
 <h2 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -690,6 +668,10 @@ sealed class <a href="./">Target</a> : <a href="https://docs.oracle.com/javase/8
 <tr>
 <td><a href="copy-target/">copyTarget</a></td>
 <td>[jvm]<br>abstract fun <a href="copy-target/">copyTarget</a>(includes: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a>&lt;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>&gt; = this.includes, excludes: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a>&lt;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>&gt; = this.excludes, exclusive: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a> = this.exclusive, outDirectory: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a> = this.outDirectory): <a href="./">Target</a><br>Returns a new Target object that is a copy of this one, but with the given fields updated.</td>
+</tr>
+<tr>
+<td><a href="new-handler/">newHandler</a></td>
+<td>[jvm]<br>abstract fun <a href="new-handler/">newHandler</a>(): SchemaHandler</td>
 </tr>
 </tbody>
 </table>
@@ -741,7 +723,7 @@ sealed class <a href="./">Target</a> : <a href="https://docs.oracle.com/javase/8
 <td><a href="../-proto-target/">ProtoTarget</a></td>
 </tr>
 <tr>
-<td><a href="../-custom-target-beta/">CustomTargetBeta</a></td>
+<td><a href="../-custom-target/">CustomTarget</a></td>
 </tr>
 </tbody>
 </table>
