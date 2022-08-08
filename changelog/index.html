@@ -569,6 +569,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#version-441" class="md-nav__link">
+    Version 4.4.1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#version-440" class="md-nav__link">
     Version 4.4.0
   </a>
@@ -1114,6 +1121,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#version-441" class="md-nav__link">
+    Version 4.4.1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#version-440" class="md-nav__link">
     Version 4.4.0
   </a>
@@ -1598,6 +1612,17 @@
 
 
 <h1 id="change-log">Change Log<a class="headerlink" href="#change-log" title="Permanent link">&para;</a></h1>
+<h2 id="version-441">Version 4.4.1<a class="headerlink" href="#version-441" title="Permanent link">&para;</a></h2>
+<p><em>2022-08-05</em></p>
+<ul>
+<li>New: Check HTTP2 protocol is set for passed client to <code>GrpcClient</code>.</li>
+<li>New: Add buildersOnly option for Java and Kotlin target, setting it to true will change the
+  visibility of generate types&rsquo; constructor to non-public.</li>
+<li>Fix: Properly define api dependency for <code>okio</code> in <code>wire-schema</code>.</li>
+<li>Fix: Sort input locations so they match on all platforms.</li>
+<li>Fix: Avoid NPEs with kotlin <code>1.7.20</code> around source sets.</li>
+<li>Update: Bumped KotlinPoet to <code>1.12.0</code>.</li>
+</ul>
 <h2 id="version-440">Version 4.4.0<a class="headerlink" href="#version-440" title="Permanent link">&para;</a></h2>
 <p><em>2022-06-07</em></p>
 <ul>

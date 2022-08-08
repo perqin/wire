@@ -1167,8 +1167,11 @@ included in the output artifact.</p>
     <span class="c1">// methods which are normally implemented with generated code.</span>
     <span class="n">compact</span> <span class="o">=</span> <span class="kc">false</span>
 
+    <span class="c1">// True to turn visibility of all generated types&#39; constructors to non-public.</span>
+    <span class="n">buildersOnly</span> <span class="o">=</span> <span class="kc">false</span>
+
     <span class="c1">// True to emit types for options declared on messages, fields, etc.</span>
-    <span class="n">emitDeclaredOptions</span> <span class="o">=</span> <span class="kc">true</span><span class="o">,</span>
+    <span class="n">emitDeclaredOptions</span> <span class="o">=</span> <span class="kc">true</span>
 
     <span class="c1">// True to emit annotations for options applied on messages, fields, etc.</span>
     <span class="n">emitAppliedOptions</span> <span class="o">=</span> <span class="kc">true</span>
@@ -1208,11 +1211,14 @@ included in the output artifact.</p>
     <span class="c1">// target.</span>
     <span class="n">javaInterop</span> <span class="o">=</span> <span class="kc">false</span>
 
+    <span class="c1">// True to turn visibility of all generated types&#39; constructors to non-public.</span>
+    <span class="n">buildersOnly</span> <span class="o">=</span> <span class="kc">false</span>
+
     <span class="c1">// True to emit types for options declared on messages, fields, etc.</span>
-    <span class="n">emitDeclaredOptions</span> <span class="o">=</span> <span class="kc">true</span><span class="o">,</span>
+    <span class="n">emitDeclaredOptions</span> <span class="o">=</span> <span class="kc">true</span>
 
     <span class="c1">// True to emit annotations for options applied on messages, fields, etc.</span>
-    <span class="n">emitAppliedOptions</span> <span class="o">=</span> <span class="kc">true</span><span class="o">,</span>
+    <span class="n">emitAppliedOptions</span> <span class="o">=</span> <span class="kc">true</span>
 
     <span class="c1">// `suspending` to generate coroutines APIs that require a Kotlin coroutines context.</span>
     <span class="c1">// `blocking` to generate blocking APIs callable by Java and Kotlin.</span>
