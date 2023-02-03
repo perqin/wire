@@ -93,6 +93,7 @@ $dokka.location:com.squareup.wire/WireCompiler.Companion/forArgs/#okio.FileSyste
 $dokka.location:com.squareup.wire/WireCompiler.Companion/main/#kotlin.Array[kotlin.String]/PointingToDeclaration/wire-compiler/com.squareup.wire/-wire-compiler/-companion/main.md
 $dokka.location:com.squareup.wire/WireCompiler///PointingToDeclaration/wire-compiler/com.squareup.wire/-wire-compiler/index.md
 $dokka.location:com.squareup.wire/WireCompiler/compile/#/PointingToDeclaration/wire-compiler/com.squareup.wire/-wire-compiler/compile.md
+$dokka.location:com.squareup.wire/WireCompiler/customOut/#/PointingToDeclaration/wire-compiler/com.squareup.wire/-wire-compiler/custom-out.md
 $dokka.location:com.squareup.wire/WireCompiler/emitAndroid/#/PointingToDeclaration/wire-compiler/com.squareup.wire/-wire-compiler/emit-android.md
 $dokka.location:com.squareup.wire/WireCompiler/emitAndroidAnnotations/#/PointingToDeclaration/wire-compiler/com.squareup.wire/-wire-compiler/emit-android-annotations.md
 $dokka.location:com.squareup.wire/WireCompiler/emitAppliedOptions/#/PointingToDeclaration/wire-compiler/com.squareup.wire/-wire-compiler/emit-applied-options.md
@@ -107,6 +108,7 @@ $dokka.location:com.squareup.wire/WireCompiler/log/#/PointingToDeclaration/wire
 $dokka.location:com.squareup.wire/WireCompiler/modules/#/PointingToDeclaration/wire-compiler/com.squareup.wire/-wire-compiler/modules.md
 $dokka.location:com.squareup.wire/WireCompiler/permitPackageCycles/#/PointingToDeclaration/wire-compiler/com.squareup.wire/-wire-compiler/permit-package-cycles.md
 $dokka.location:com.squareup.wire/WireCompiler/protoPaths/#/PointingToDeclaration/wire-compiler/com.squareup.wire/-wire-compiler/proto-paths.md
+$dokka.location:com.squareup.wire/WireCompiler/schemaHandlerFactoryClass/#/PointingToDeclaration/wire-compiler/com.squareup.wire/-wire-compiler/schema-handler-factory-class.md
 $dokka.location:com.squareup.wire/WireCompiler/sourceFileNames/#/PointingToDeclaration/wire-compiler/com.squareup.wire/-wire-compiler/source-file-names.md
 $dokka.location:com.squareup.wire/WireCompiler/swiftOut/#/PointingToDeclaration/wire-compiler/com.squareup.wire/-wire-compiler/swift-out.md
 $dokka.location:com.squareup.wire/WireCompiler/treeShakingRoots/#/PointingToDeclaration/wire-compiler/com.squareup.wire/-wire-compiler/tree-shaking-roots.md

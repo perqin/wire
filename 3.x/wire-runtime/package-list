@@ -1,7 +1,6 @@
 $dokka.format:gfm-v1
 $dokka.linkExtension:md
 $dokka.location:com.squareup.wire////PointingToDeclaration/wire-runtime/com.squareup.wire/index.md
-$dokka.location:com.squareup.wire//VERSION/#/PointingToDeclaration/wire-runtime/com.squareup.wire/-v-e-r-s-i-o-n.md
 $dokka.location:com.squareup.wire//decode/com.squareup.wire.ProtoAdapter[TypeParam(bounds=[kotlin.Any?])]#NSData/PointingToDeclaration/wire-runtime/com.squareup.wire/decode.md
 $dokka.location:com.squareup.wire//durationOfSeconds/#kotlin.Long#kotlin.Long/PointingToDeclaration/wire-runtime/com.squareup.wire/duration-of-seconds.md
 $dokka.location:com.squareup.wire//get/#TypeParam(bounds=[kotlin.Any?])?#TypeParam(bounds=[kotlin.Any?])/PointingToDeclaration/wire-runtime/com.squareup.wire/get.md

@@ -12,8 +12,14 @@
         <meta name="author" content="Square, Inc.">
       
       
+      
+        <link rel="prev" href="../wire_vs_protoc/">
+      
+      
+        <link rel="next" href="../contributing/">
+      
       <link rel="icon" href="../images/icon-square.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.1">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.10">
     
     
       
@@ -21,33 +27,32 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.e8d9bf0c.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.0d440cfe.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.e6a45f82.min.css">
-        
-          
-          
-          <meta name="theme-color" content="#2094f3">
-        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
       
+      
+
     
     
     
       
+        
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
       <link rel="stylesheet" href="../css/app.css">
     
-    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
+    
     
     
   </head>
@@ -58,7 +63,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue" data-md-color-accent="white">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="white">
   
     
     
@@ -88,7 +93,7 @@
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -110,7 +115,7 @@
     
     
       <label class="md-header__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
       </label>
       <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
@@ -118,13 +123,13 @@
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
       
@@ -135,7 +140,7 @@
           <div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
@@ -144,10 +149,10 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/square/wire/" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/square/wire" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     Wire
@@ -188,10 +193,10 @@
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/square/wire/" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/square/wire" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     Wire
@@ -272,17 +277,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_5">
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
           3.x API
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="3.x API" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           3.x API
@@ -446,17 +452,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_6">
+        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
           2.x API
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="2.x API" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_6">
           <span class="md-nav__icon md-icon"></span>
           2.x API
@@ -538,7 +545,7 @@
   
     <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
         
@@ -567,6 +574,40 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#version-450" class="md-nav__link">
+    Version 4.5.0
+  </a>
+  
+    <nav class="md-nav" aria-label="Version 4.5.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#swift" class="md-nav__link">
+    Swift
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-443" class="md-nav__link">
+    Version 4.4.3
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-442" class="md-nav__link">
+    Version 4.4.2
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#version-441" class="md-nav__link">
@@ -1121,6 +1162,40 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#version-450" class="md-nav__link">
+    Version 4.5.0
+  </a>
+  
+    <nav class="md-nav" aria-label="Version 4.5.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#swift" class="md-nav__link">
+    Swift
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-443" class="md-nav__link">
+    Version 4.4.3
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-442" class="md-nav__link">
+    Version 4.4.2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#version-441" class="md-nav__link">
     Version 4.4.1
   </a>
@@ -1601,17 +1676,64 @@
               </div>
             
           
-          <div class="md-content" data-md-component="content">
-            <article class="md-content__inner md-typeset">
-              
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
-<a href="https://github.com/square/wire/edit/master/docs/changelog.md" title="Edit this page" class="md-content__button md-icon">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
-</a>
+                  
+
+  
+  
 
 
 
 <h1 id="change-log">Change Log<a class="headerlink" href="#change-log" title="Permanent link">&para;</a></h1>
+<h2 id="version-450">Version 4.5.0<a class="headerlink" href="#version-450" title="Permanent link">&para;</a></h2>
+<p><em>2023-02-02</em></p>
+<ul>
+<li>Add support for <code>tvOS</code>.</li>
+<li>Add ability to supply custom schema handler from command line.</li>
+</ul>
+<h3 id="swift">Swift<a class="headerlink" href="#swift" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Add <code>Sendable</code> conformance to all generated types.</li>
+<li>Improved support for Proto3 types such as <code>Struct</code>, <code>Any</code>, <code>Duration</code>, and <code>Timestamp</code>.</li>
+<li><code>@JsonString</code> has been deprecated and will be removed in a future release.</li>
+<li>Codable conformance has been completely rewritten and should be much more compliant to the spec.<ul>
+<li>This is a somewhat breaking change and heavily dependent upon the types you were using.</li>
+<li>Notably: Dictionaries with non-string keys are not forwards compatible with new models.</li>
+<li>The corrected encoding are not backwards compatible with old models.</li>
+<li>Encoding fixes:<ul>
+<li><code>unknownFields</code> should never be encoded any more.</li>
+<li>Don&rsquo;t encode default values by default (configurable).</li>
+<li>Encode field names in camelCase by default (configurable).</li>
+<li>Encode Enums as Strings by default (configurable).</li>
+<li>Maps will now always encode their keys as Strings.</li>
+</ul>
+</li>
+<li>Decoding fixes:<ul>
+<li>Data now supports both base64 and base64url binary formats.</li>
+<li>Enums can now be decoded from either String or UInt32 values.</li>
+<li>Unknown Enum values can optionally be skipped.</li>
+<li>Both camelCase and snake_case key names are accepted. camelCase is preferred.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="version-443">Version 4.4.3<a class="headerlink" href="#version-443" title="Permanent link">&para;</a></h2>
+<p><em>2022-10-26</em></p>
+<ul>
+<li>Fix: No more NPEs when the building project uses Kotlin <code>1.7.20</code>.</li>
+</ul>
+<h2 id="version-442">Version 4.4.2<a class="headerlink" href="#version-442" title="Permanent link">&para;</a></h2>
+<p><em>2022-10-06</em></p>
+<ul>
+<li>Fix: Use KotlinProjectExtension to access source sets.</li>
+<li>Fix: Improve support for ZIP artifacts.</li>
+<li>Fix: When set to true, <code>buildersOnly</code> will take precedence over <code>javaInterop</code> when generating Kotlin.</li>
+<li>Fix: Support nested extensions in a message.</li>
+</ul>
 <h2 id="version-441">Version 4.4.1<a class="headerlink" href="#version-441" title="Permanent link">&para;</a></h2>
 <p><em>2022-08-05</em></p>
 <ul>
@@ -1664,12 +1786,12 @@
 <p>New: Publish a <a href="https://docs.gradle.org/6.2/userguide/platforms.html#sub:bom_import">bill of materials (BOM)</a> for Wire. Depend on this from Gradle or Maven to
    keep all of your Wire artifacts on the same version, even if they&rsquo;re declared via transitive
    dependencies. You can even omit versions when declaring other Wire dependencies.</p>
-<div class="highlight"><pre><span></span><code><span class="n">dependencies</span> <span class="p">{</span>
-  <span class="n">implementation</span><span class="p">(</span><span class="n">platform</span><span class="p">(</span><span class="s">&quot;com.squareup.wire:wire-bom:4.2.0&quot;</span><span class="p">))</span>
-  <span class="n">implementation</span><span class="p">(</span><span class="s">&quot;com.squareup.wire:wire-compiler&quot;</span><span class="p">)</span>      <span class="c1">// No version!</span>
-  <span class="n">implementation</span><span class="p">(</span><span class="s">&quot;com.squareup.wire:wire-gradle-plugin&quot;</span><span class="p">)</span> <span class="c1">// No version!</span>
-  <span class="n">implementation</span><span class="p">(</span><span class="s">&quot;com.squareup.wire:wire-grpc-client&quot;</span><span class="p">)</span>   <span class="c1">// No version!</span>
-  <span class="c1">// Etc.</span>
+<div class="highlight"><pre><span></span><code><span class="n">dependencies</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">implementation</span><span class="p">(</span><span class="n">platform</span><span class="p">(</span><span class="s">&quot;com.squareup.wire:wire-bom:4.2.0&quot;</span><span class="p">))</span>
+<span class="w">  </span><span class="n">implementation</span><span class="p">(</span><span class="s">&quot;com.squareup.wire:wire-compiler&quot;</span><span class="p">)</span><span class="w">      </span><span class="c1">// No version!</span>
+<span class="w">  </span><span class="n">implementation</span><span class="p">(</span><span class="s">&quot;com.squareup.wire:wire-gradle-plugin&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// No version!</span>
+<span class="w">  </span><span class="n">implementation</span><span class="p">(</span><span class="s">&quot;com.squareup.wire:wire-grpc-client&quot;</span><span class="p">)</span><span class="w">   </span><span class="c1">// No version!</span>
+<span class="w">  </span><span class="c1">// Etc.</span>
 <span class="p">}</span>
 </code></pre></div>
 </li>
@@ -2062,10 +2184,10 @@ the repository.</p>
    platforms may not work correctly at this point. The artifact name for the JVM artifact has been
    changed to <code>wire-runtime-jvm</code>: now, in order to depend on the multiplatform runtime, use the
    following Gradle dependency declaration:</p>
-<div class="highlight"><pre><span></span><code><span class="n">api</span> <span class="s2">&quot;com.squareup.wire:wire-runtime:3.0.0-alpha02&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="n">api</span><span class="w"> </span><span class="s2">&quot;com.squareup.wire:wire-runtime:3.0.0-alpha02&quot;</span>
 </code></pre></div>
 <p>and if you want to depend on the JVM artifact only, use the following declaration:</p>
-<div class="highlight"><pre><span></span><code><span class="n">api</span> <span class="s2">&quot;com.squareup.wire:wire-runtime-jvm:3.0.0-alpha02&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="n">api</span><span class="w"> </span><span class="s2">&quot;com.squareup.wire:wire-runtime-jvm:3.0.0-alpha02&quot;</span>
 </code></pre></div>
 <ul>
 <li>New: Generate RPCs as Single Abstract Methods.</li>
@@ -2096,18 +2218,18 @@ the repository.</p>
 <span class="p">}</span>
 </code></pre></div>
 <p>the generated Kotlin code will look like the following:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">data</span> <span class="kd">class</span> <span class="nc">Person</span><span class="p">(</span>
-  <span class="nd">@field</span><span class="p">:</span><span class="n">WireField</span><span class="p">(</span><span class="n">tag</span> <span class="o">=</span> <span class="m">1</span><span class="p">,</span> <span class="n">adapter</span> <span class="o">=</span> <span class="s">&quot;com.squareup.wire.ProtoAdapter#STRING&quot;</span><span class="p">)</span>
-  <span class="kd">val</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
-  <span class="nd">@field</span><span class="p">:</span><span class="n">WireField</span><span class="p">(</span><span class="n">tag</span> <span class="o">=</span> <span class="m">2</span><span class="p">,</span> <span class="n">adapter</span> <span class="o">=</span> <span class="s">&quot;com.squareup.wire.ProtoAdapter#INT32&quot;</span><span class="p">)</span>
-  <span class="kd">val</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
-  <span class="nd">@field</span><span class="p">:</span><span class="n">WireField</span><span class="p">(</span><span class="n">tag</span> <span class="o">=</span> <span class="m">3</span><span class="p">,</span> <span class="n">adapter</span> <span class="o">=</span> <span class="s">&quot;com.squareup.wire.ProtoAdapter#STRING&quot;</span><span class="p">)</span>
-  <span class="kd">val</span> <span class="nv">email</span><span class="p">:</span> <span class="kt">String?</span> <span class="o">=</span> <span class="kc">null</span><span class="p">,</span>
-  <span class="kd">val</span> <span class="nv">unknownFields</span><span class="p">:</span> <span class="n">ByteString</span> <span class="o">=</span> <span class="n">ByteString</span><span class="p">.</span><span class="na">EMPTY</span>
-<span class="p">)</span> <span class="p">:</span> <span class="n">Message</span><span class="o">&lt;</span><span class="n">Person</span><span class="p">,</span> <span class="n">Person</span><span class="p">.</span><span class="na">Builder</span><span class="o">&gt;</span><span class="p">(</span><span class="n">ADAPTER</span><span class="p">,</span> <span class="n">unknownFields</span><span class="p">)</span> <span class="p">{</span>
-  <span class="kd">companion</span> <span class="kd">object</span> <span class="err">{</span>
-    <span class="nd">@JvmField</span>
-    <span class="kd">val</span> <span class="nv">ADAPTER</span><span class="p">:</span> <span class="n">ProtoAdapter</span><span class="o">&lt;</span><span class="n">Person</span><span class="o">&gt;</span> <span class="o">=</span> <span class="p">...</span> <span class="c1">// code omitted for brevity</span>
+<div class="highlight"><pre><span></span><code><span class="kd">data</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nc">Person</span><span class="p">(</span>
+<span class="w">  </span><span class="nd">@field</span><span class="p">:</span><span class="n">WireField</span><span class="p">(</span><span class="n">tag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">adapter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;com.squareup.wire.ProtoAdapter#STRING&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="nv">name</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span>
+<span class="w">  </span><span class="nd">@field</span><span class="p">:</span><span class="n">WireField</span><span class="p">(</span><span class="n">tag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">adapter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;com.squareup.wire.ProtoAdapter#INT32&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="nv">id</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">,</span>
+<span class="w">  </span><span class="nd">@field</span><span class="p">:</span><span class="n">WireField</span><span class="p">(</span><span class="n">tag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="n">adapter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;com.squareup.wire.ProtoAdapter#STRING&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="nv">email</span><span class="p">:</span><span class="w"> </span><span class="kt">String?</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="nv">unknownFields</span><span class="p">:</span><span class="w"> </span><span class="n">ByteString</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ByteString</span><span class="p">.</span><span class="na">EMPTY</span>
+<span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Message</span><span class="o">&lt;</span><span class="n">Person</span><span class="p">,</span><span class="w"> </span><span class="n">Person</span><span class="p">.</span><span class="na">Builder</span><span class="o">&gt;</span><span class="p">(</span><span class="n">ADAPTER</span><span class="p">,</span><span class="w"> </span><span class="n">unknownFields</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">companion</span><span class="w"> </span><span class="kd">object</span><span class="w"> </span><span class="err">{</span>
+<span class="w">    </span><span class="nd">@JvmField</span>
+<span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">ADAPTER</span><span class="p">:</span><span class="w"> </span><span class="n">ProtoAdapter</span><span class="o">&lt;</span><span class="n">Person</span><span class="o">&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="c1">// code omitted for brevity</span>
 </code></pre></div>
 <p>The <code>copy()</code> method of a data class replaces most usages of the builder. If your code relies on
    the <code>Builder</code>, you can enable full <code>Builder</code> generation by passing the <code>--java_interop</code> parameter
@@ -2129,13 +2251,13 @@ the repository.</p>
 </code></pre></div>
 <p>The generated code will look like the following (message protos, referenced by the schema, are
    omitted):</p>
-<div class="highlight"><pre><span></span><code><span class="kd">interface</span> <span class="nc">RouteGuide</span> <span class="p">:</span> <span class="n">Service</span> <span class="p">{</span>
-  <span class="nd">@WireRpc</span><span class="p">(</span>
-      <span class="n">path</span> <span class="o">=</span> <span class="s">&quot;/routeguide.RouteGuide/GetFeature&quot;</span><span class="p">,</span>
-      <span class="n">requestAdapter</span> <span class="o">=</span> <span class="s">&quot;routeguide.Point#ADAPTER&quot;</span><span class="p">,</span>
-      <span class="n">responseAdapter</span> <span class="o">=</span> <span class="s">&quot;routeguide.Feature#ADAPTER&quot;</span>
-  <span class="p">)</span>
-  <span class="kd">suspend</span> <span class="kd">fun</span> <span class="nf">GetFeature</span><span class="p">(</span><span class="n">request</span><span class="p">:</span> <span class="n">Point</span><span class="p">):</span> <span class="n">Feature</span>
+<div class="highlight"><pre><span></span><code><span class="kd">interface</span><span class="w"> </span><span class="nc">RouteGuide</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Service</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nd">@WireRpc</span><span class="p">(</span>
+<span class="w">      </span><span class="n">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;/routeguide.RouteGuide/GetFeature&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="n">requestAdapter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;routeguide.Point#ADAPTER&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="n">responseAdapter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;routeguide.Feature#ADAPTER&quot;</span>
+<span class="w">  </span><span class="p">)</span>
+<span class="w">  </span><span class="kd">suspend</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">GetFeature</span><span class="p">(</span><span class="n">request</span><span class="p">:</span><span class="w"> </span><span class="n">Point</span><span class="p">):</span><span class="w"> </span><span class="n">Feature</span>
 <span class="p">}</span>
 </code></pre></div>
 <p>All four gRPC modes are supported: the generated code uses suspendable functions to implement
@@ -2147,22 +2269,22 @@ the repository.</p>
 <li>New: Gradle plugin</li>
 </ul>
 <p>Here&rsquo;s an example Gradle configuration:</p>
-<div class="highlight"><pre><span></span><code><span class="n">apply</span> <span class="nl">plugin:</span> <span class="s1">&#39;com.squareup.wire&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="n">apply</span><span class="w"> </span><span class="nl">plugin:</span><span class="w"> </span><span class="s1">&#39;com.squareup.wire&#39;</span>
 
-<span class="n">wire</span> <span class="o">{</span>
-  <span class="c1">// Keeps only &#39;Dinosaur#name&#39; as the root of the object graph</span>
-  <span class="n">roots</span> <span class="s1">&#39;squareup.dinosaurs.Dinosaur#name&#39;</span>
+<span class="n">wire</span><span class="w"> </span><span class="o">{</span>
+<span class="w">  </span><span class="c1">// Keeps only &#39;Dinosaur#name&#39; as the root of the object graph</span>
+<span class="w">  </span><span class="n">roots</span><span class="w"> </span><span class="s1">&#39;squareup.dinosaurs.Dinosaur#name&#39;</span>
 
-  <span class="c1">// Keeps all fields, except &#39;name&#39;, in &#39;Dinosaur&#39;</span>
-  <span class="n">prunes</span> <span class="s1">&#39;squareup.dinosaurs.Dinosaur#name&#39;</span>
+<span class="w">  </span><span class="c1">// Keeps all fields, except &#39;name&#39;, in &#39;Dinosaur&#39;</span>
+<span class="w">  </span><span class="n">prunes</span><span class="w"> </span><span class="s1">&#39;squareup.dinosaurs.Dinosaur#name&#39;</span>
 
-  <span class="c1">// Both roots and prunes in an external file</span>
-  <span class="n">rules</span> <span class="s1">&#39;rules.txt&#39;</span>
+<span class="w">  </span><span class="c1">// Both roots and prunes in an external file</span>
+<span class="w">  </span><span class="n">rules</span><span class="w"> </span><span class="s1">&#39;rules.txt&#39;</span>
 
-  <span class="n">kotlin</span> <span class="o">{</span>
-    <span class="n">javaInterop</span> <span class="kc">true</span>
-    <span class="n">out</span> <span class="s2">&quot;${buildDir}/generated/custom&quot;</span>
-  <span class="o">}</span>
+<span class="w">  </span><span class="n">kotlin</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="n">javaInterop</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">    </span><span class="n">out</span><span class="w"> </span><span class="s2">&quot;${buildDir}/generated/custom&quot;</span>
+<span class="w">  </span><span class="o">}</span>
 <span class="o">}</span>
 </code></pre></div>
 <p>The <code>wire</code> extension introduces the concept of compilation targets, such as <code>kotlin</code> and <code>java</code>,
@@ -2458,49 +2580,20 @@ no longer need a <code>Wire</code> instance!</p>
 <p><em>2013-08-23</em></p>
 <p>Initial version.</p>
 
-              
-            </article>
-          </div>
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
         </div>
         
       </main>
       
         <footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-        
-        <a href="../wire_vs_protoc/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Wire vs Protoc" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Wire vs Protoc
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../contributing/" class="md-footer__link md-footer__link--next" aria-label="Next: Contributing" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Contributing
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -2526,10 +2619,11 @@ no longer need a <code>Wire</code> instance!</p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.8aa65030.min.js"></script>
+      <script src="../assets/javascripts/bundle.6df46069.min.js"></script>
       
     
   </body>
