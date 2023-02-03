@@ -363,19 +363,25 @@
     Swift Support
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="Swift Support">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#build-your-protos" class="md-nav__link">
     Build Your Protos
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#swift-manifest" class="md-nav__link">
     Swift Manifest
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -872,19 +878,25 @@
     Swift Support
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="Swift Support">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#build-your-protos" class="md-nav__link">
     Build Your Protos
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#swift-manifest" class="md-nav__link">
     Swift Manifest
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1343,7 +1355,7 @@ configuration. Booleans and enums are shown with their default behavior.</p>
 </code></pre></div>
 <p>Then run pod install to get the dependencies and build the Wire compiler.</p>
 <p>Swift Package Manager is also supported for linking the Wire runtime.</p>
-<h2 id="build-your-protos">Build Your Protos<a class="headerlink" href="#build-your-protos" title="Permanent link">&para;</a></h2>
+<h3 id="build-your-protos">Build Your Protos<a class="headerlink" href="#build-your-protos" title="Permanent link">&para;</a></h3>
 <p>The Wire compiler uses <a href="https://github.com/outfoxx/swiftpoet">SwiftPoet</a> to generate Swift code.
 The resulting objects automatically conform to <code>Equatable</code>, <code>Codable</code> and <code>Sendable</code>.</p>
 <p>Assuming you&rsquo;ve used CocoaPods to download the Wire compiler, to compile your protos into Swift files:</p>
@@ -1352,7 +1364,7 @@ The resulting objects automatically conform to <code>Equatable</code>, <code>Cod
 <span class="w">  </span><span class="s2">&quot;--swift_out=&lt;directory where the generated .swift files go&gt;&quot;</span><span class="w"> </span><span class="se">\</span>
 <span class="w">  </span><span class="s2">&quot;--experimental-module-manifest=&lt;path to manifest yaml file&gt;&quot;</span>
 </code></pre></div>
-<h2 id="swift-manifest">Swift Manifest<a class="headerlink" href="#swift-manifest" title="Permanent link">&para;</a></h2>
+<h3 id="swift-manifest">Swift Manifest<a class="headerlink" href="#swift-manifest" title="Permanent link">&para;</a></h3>
 <p>Swift introduced a new challenge that didn’t exist with Kotlin and Java: modules.
 Kotlin and Java both use fully-qualified package names, but Swift modules are defined by their compilation unit, and thus namespaces aren’t declared at the type or file level.
 This meant that we needed to build a new packaging system for Swift that could deal with Swift module namespacing and imports.</p>
