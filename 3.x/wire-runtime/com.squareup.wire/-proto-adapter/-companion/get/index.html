@@ -641,6 +641,10 @@
 <p>@<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-static/index.html">JvmStatic</a></p>
 <p>fun <a href="./">get</a>(adapterString: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>): <a href="../../">ProtoAdapter</a>&lt;*&gt;</p>
 <p>Returns the adapter for a given adapterString. adapterString is specified on a proto message field&rsquo;s WireField annotation in the form com.squareup.wire.protos.person.Person#ADAPTER.</p>
+<p>[jvm]\</p>
+<p>@<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-static/index.html">JvmStatic</a></p>
+<p>fun <a href="./">get</a>(adapterString: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>, classLoader: <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/ClassLoader.html">ClassLoader</a>?): <a href="../../">ProtoAdapter</a>&lt;*&gt;</p>
+<p>Returns the adapter for a given adapterString, using <a href="./">classLoader</a>. adapterString is specified on a proto message field&rsquo;s WireField annotation in the form com.squareup.wire.protos.person.Person#ADAPTER.</p>
 
 
 

@@ -645,7 +645,7 @@
 <p>//<a href="../../../">wire-grpc-client</a>/<a href="../">com.squareup.wire</a>/<a href="./">GrpcException</a></p>
 <h1 id="grpcexception">GrpcException<a class="headerlink" href="#grpcexception" title="Permanent link">&para;</a></h1>
 <p>[common]\
-class <a href="./">GrpcException</a>(grpcStatus: <a href="../-grpc-status/">GrpcStatus</a>, grpcMessage: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>?) : IOException</p>
+class <a href="./">GrpcException</a>(grpcStatus: <a href="../-grpc-status/">GrpcStatus</a>, grpcMessage: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>?, grpcStatusDetails: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a>?) : IOException</p>
 <h2 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -666,6 +666,10 @@ class <a href="./">GrpcException</a>(grpcStatus: <a href="../-grpc-status/">Grpc
 <tr>
 <td><a href="grpc-status/">grpcStatus</a></td>
 <td>[common]<br>val <a href="grpc-status/">grpcStatus</a>: <a href="../-grpc-status/">GrpcStatus</a></td>
+</tr>
+<tr>
+<td><a href="grpc-status-details/">grpcStatusDetails</a></td>
+<td>[common]<br>val <a href="grpc-status-details/">grpcStatusDetails</a>: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a>? = null</td>
 </tr>
 <tr>
 <td><a href="./#1824300659%2FProperties%2F1134568089">message</a></td>

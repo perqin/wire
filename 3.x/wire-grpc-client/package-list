@@ -35,9 +35,10 @@ $dokka.location:com.squareup.wire/GrpcClient/newBuilder/#/PointingToDeclaration/
 $dokka.location:com.squareup.wire/GrpcClient/newCall/#com.squareup.wire.GrpcMethod[TypeParam(bounds=[kotlin.Any]),TypeParam(bounds=[kotlin.Any])]/PointingToDeclaration/wire-grpc-client/com.squareup.wire/-grpc-client/new-call.md
 $dokka.location:com.squareup.wire/GrpcClient/newStreamingCall/#com.squareup.wire.GrpcMethod[TypeParam(bounds=[kotlin.Any]),TypeParam(bounds=[kotlin.Any])]/PointingToDeclaration/wire-grpc-client/com.squareup.wire/-grpc-client/new-streaming-call.md
 $dokka.location:com.squareup.wire/GrpcException///PointingToDeclaration/wire-grpc-client/com.squareup.wire/-grpc-exception/index.md
-$dokka.location:com.squareup.wire/GrpcException/GrpcException/#com.squareup.wire.GrpcStatus#kotlin.String?/PointingToDeclaration/wire-grpc-client/com.squareup.wire/-grpc-exception/-grpc-exception.md
+$dokka.location:com.squareup.wire/GrpcException/GrpcException/#com.squareup.wire.GrpcStatus#kotlin.String?#kotlin.ByteArray?/PointingToDeclaration/wire-grpc-client/com.squareup.wire/-grpc-exception/-grpc-exception.md
 $dokka.location:com.squareup.wire/GrpcException/grpcMessage/#/PointingToDeclaration/wire-grpc-client/com.squareup.wire/-grpc-exception/grpc-message.md
 $dokka.location:com.squareup.wire/GrpcException/grpcStatus/#/PointingToDeclaration/wire-grpc-client/com.squareup.wire/-grpc-exception/grpc-status.md
+$dokka.location:com.squareup.wire/GrpcException/grpcStatusDetails/#/PointingToDeclaration/wire-grpc-client/com.squareup.wire/-grpc-exception/grpc-status-details.md
 $dokka.location:com.squareup.wire/GrpcHeaders///PointingToDeclaration/wire-grpc-client/com.squareup.wire/-grpc-headers/index.md
 $dokka.location:com.squareup.wire/GrpcHeaders/GrpcHeaders/#/PointingToDeclaration/wire-grpc-client/com.squareup.wire/-grpc-headers/-grpc-headers.md
 $dokka.location:com.squareup.wire/GrpcHeaders/get/#kotlin.String/PointingToDeclaration/wire-grpc-client/com.squareup.wire/-grpc-headers/get.md
