@@ -36,7 +36,7 @@ final class WriteBuffer {
     init(capacity: Int = 0) {
         self.capacity = 0
 
-        if capacity > 0 {
+        if capacity >= 0 {
             expand(to: capacity)
         }
     }

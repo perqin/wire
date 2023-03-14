@@ -44,4 +44,12 @@ final class ProtoEncoderTests: XCTestCase {
 
         XCTAssertEqual(jsonString, "{}")
     }
+
+    func testEncodeEmptySizeDelimitedMessage() throws {
+        let object = EmptyMessage()
+        let encoder = ProtoEncoder()
+        let data = try encoder.encodeSizeDelimited([object])
+
+        XCTAssertEqual(data, Data())
+    }
 }
