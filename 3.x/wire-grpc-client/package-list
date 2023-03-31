@@ -5,7 +5,7 @@ $dokka.location:com.squareup.wire//GrpcCall/#kotlin.Function1[TypeParam(bounds=[
 $dokka.location:com.squareup.wire//GrpcStreamingCall/#kotlin.coroutines.SuspendFunction2[kotlinx.coroutines.channels.ReceiveChannel[TypeParam(bounds=[kotlin.Any])],kotlinx.coroutines.channels.SendChannel[TypeParam(bounds=[kotlin.Any])],kotlin.Unit]/PointingToDeclaration/wire-grpc-client/com.squareup.wire/-grpc-streaming-call.md
 $dokka.location:com.squareup.wire//toHttpUrl/kotlin.String#/PointingToDeclaration/wire-grpc-client/com.squareup.wire/to-http-url.md
 $dokka.location:com.squareup.wire/GrpcCall.Callback///PointingToDeclaration/wire-grpc-client/com.squareup.wire/-grpc-call/-callback/index.md
-$dokka.location:com.squareup.wire/GrpcCall.Callback/onFailure/#com.squareup.wire.GrpcCall[TypeParam(bounds=[kotlin.Any]),TypeParam(bounds=[kotlin.Any])]#okio.IOException/PointingToDeclaration/wire-grpc-client/com.squareup.wire/-grpc-call/-callback/on-failure.md
+$dokka.location:com.squareup.wire/GrpcCall.Callback/onFailure/#com.squareup.wire.GrpcCall[TypeParam(bounds=[kotlin.Any]),TypeParam(bounds=[kotlin.Any])]#IOException/PointingToDeclaration/wire-grpc-client/com.squareup.wire/-grpc-call/-callback/on-failure.md
 $dokka.location:com.squareup.wire/GrpcCall.Callback/onSuccess/#com.squareup.wire.GrpcCall[TypeParam(bounds=[kotlin.Any]),TypeParam(bounds=[kotlin.Any])]#TypeParam(bounds=[kotlin.Any])/PointingToDeclaration/wire-grpc-client/com.squareup.wire/-grpc-call/-callback/on-success.md
 $dokka.location:com.squareup.wire/GrpcCall///PointingToDeclaration/wire-grpc-client/com.squareup.wire/-grpc-call/index.md
 $dokka.location:com.squareup.wire/GrpcCall/cancel/#/PointingToDeclaration/wire-grpc-client/com.squareup.wire/-grpc-call/cancel.md
@@ -46,7 +46,7 @@ $dokka.location:com.squareup.wire/GrpcHttpUrl///PointingToDeclaration/wire-grpc
 $dokka.location:com.squareup.wire/GrpcHttpUrl/GrpcHttpUrl/#/PointingToDeclaration/wire-grpc-client/com.squareup.wire/-grpc-http-url/-grpc-http-url.md
 $dokka.location:com.squareup.wire/GrpcHttpUrl/resolve/#kotlin.String/PointingToDeclaration/wire-grpc-client/com.squareup.wire/-grpc-http-url/resolve.md
 $dokka.location:com.squareup.wire/GrpcMethod///PointingToDeclaration/wire-grpc-client/com.squareup.wire/-grpc-method/index.md
-$dokka.location:com.squareup.wire/GrpcMethod/GrpcMethod/#kotlin.String#com.squareup.wire.ProtoAdapter[TypeParam(bounds=[kotlin.Any])]#com.squareup.wire.ProtoAdapter[TypeParam(bounds=[kotlin.Any])]/PointingToDeclaration/wire-grpc-client/com.squareup.wire/-grpc-method/-grpc-method.md
+$dokka.location:com.squareup.wire/GrpcMethod/GrpcMethod/#kotlin.String#ProtoAdapter<S>[TypeParam(bounds=[kotlin.Any])]#ProtoAdapter<R>[TypeParam(bounds=[kotlin.Any])]/PointingToDeclaration/wire-grpc-client/com.squareup.wire/-grpc-method/-grpc-method.md
 $dokka.location:com.squareup.wire/GrpcMethod/path/#/PointingToDeclaration/wire-grpc-client/com.squareup.wire/-grpc-method/path.md
 $dokka.location:com.squareup.wire/GrpcMethod/requestAdapter/#/PointingToDeclaration/wire-grpc-client/com.squareup.wire/-grpc-method/request-adapter.md
 $dokka.location:com.squareup.wire/GrpcMethod/responseAdapter/#/PointingToDeclaration/wire-grpc-client/com.squareup.wire/-grpc-method/response-adapter.md
@@ -95,7 +95,7 @@ $dokka.location:com.squareup.wire/GrpcStreamingCall///PointingToDeclaration/wir
 $dokka.location:com.squareup.wire/GrpcStreamingCall/cancel/#/PointingToDeclaration/wire-grpc-client/com.squareup.wire/-grpc-streaming-call/cancel.md
 $dokka.location:com.squareup.wire/GrpcStreamingCall/clone/#/PointingToDeclaration/wire-grpc-client/com.squareup.wire/-grpc-streaming-call/clone.md
 $dokka.location:com.squareup.wire/GrpcStreamingCall/executeBlocking/#/PointingToDeclaration/wire-grpc-client/com.squareup.wire/-grpc-streaming-call/execute-blocking.md
-$dokka.location:com.squareup.wire/GrpcStreamingCall/executeIn/#kotlinx.coroutines.CoroutineScope/PointingToDeclaration/wire-grpc-client/com.squareup.wire/-grpc-streaming-call/execute-in.md
+$dokka.location:com.squareup.wire/GrpcStreamingCall/executeIn/#CoroutineScope/PointingToDeclaration/wire-grpc-client/com.squareup.wire/-grpc-streaming-call/execute-in.md
 $dokka.location:com.squareup.wire/GrpcStreamingCall/isCanceled/#/PointingToDeclaration/wire-grpc-client/com.squareup.wire/-grpc-streaming-call/is-canceled.md
 $dokka.location:com.squareup.wire/GrpcStreamingCall/isExecuted/#/PointingToDeclaration/wire-grpc-client/com.squareup.wire/-grpc-streaming-call/is-executed.md
 $dokka.location:com.squareup.wire/GrpcStreamingCall/method/#/PointingToDeclaration/wire-grpc-client/com.squareup.wire/-grpc-streaming-call/method.md

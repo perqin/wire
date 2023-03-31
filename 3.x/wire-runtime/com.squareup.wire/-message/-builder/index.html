@@ -617,13 +617,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#constructors" class="md-nav__link">
-    Constructors
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#functions" class="md-nav__link">
     Functions
   </a>
@@ -654,25 +647,6 @@
 <p>[common, js, jvm, native]\
 abstract class <a href="./">Builder</a>&lt;<a href="./">M</a> : <a href="../">Message</a>&lt;<a href="./">M</a>, <a href="./">B</a>&gt;, <a href="./">B</a> : <a href="./">Message.Builder</a>&lt;<a href="./">M</a>, <a href="./">B</a>&gt;&gt;</p>
 <p>Superclass for protocol buffer message builders.</p>
-<h2 id="constructors">Constructors<a class="headerlink" href="#constructors" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="-builder/">Builder</a></td>
-<td>[js]<br>fun <a href="-builder/">Builder</a>()</td>
-</tr>
-<tr>
-<td><a href="-builder/">Builder</a></td>
-<td>[native]<br>fun <a href="-builder/">Builder</a>()</td>
-</tr>
-</tbody>
-</table>
 <h2 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -684,23 +658,23 @@ abstract class <a href="./">Builder</a>&lt;<a href="./">M</a> : <a href="../">Me
 <tbody>
 <tr>
 <td><a href="add-unknown-field/">addUnknownField</a></td>
-<td>[jvm]<br>fun <a href="add-unknown-field/">addUnknownField</a>(tag: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a>, fieldEncoding: FieldEncoding, value: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a>?): <a href="./">Message.Builder</a>&lt;<a href="./">M</a>, <a href="./">B</a>&gt;</td>
+<td>[common, js, jvm, native]<br>[common]<br>fun <a href="add-unknown-field/">addUnknownField</a>(tag: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a>, fieldEncoding: <a href="../../-field-encoding/">FieldEncoding</a>, value: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a>?): <a href="./">Message.Builder</a>&lt;<a href="./">M</a>, <a href="./">B</a>&gt;<br>[js, jvm, native]<br>fun <a href="add-unknown-field/">addUnknownField</a>(tag: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a>, fieldEncoding: FieldEncoding, value: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a>?): <a href="./">Message.Builder</a>&lt;<a href="./">M</a>, <a href="./">B</a>&gt;</td>
 </tr>
 <tr>
 <td><a href="add-unknown-fields/">addUnknownFields</a></td>
-<td>[jvm]<br>fun <a href="add-unknown-fields/">addUnknownFields</a>(unknownFields: ByteString): <a href="./">Message.Builder</a>&lt;<a href="./">M</a>, <a href="./">B</a>&gt;</td>
+<td>[common, js, native]<br>[common, js, native]<br>fun <a href="add-unknown-fields/">addUnknownFields</a>(unknownFields: &lt;ERROR CLASS&gt;): <a href="./">Message.Builder</a>&lt;<a href="./">M</a>, <a href="./">B</a>&gt;</td>
 </tr>
 <tr>
 <td><a href="build/">build</a></td>
-<td>[jvm]<br>abstract fun <a href="build/">build</a>(): <a href="./">M</a><br>Returns an immutable <a href="../">Message</a> based on the fields that set in this builder.</td>
+<td>[common]<br>abstract fun <a href="build/">build</a>(): <a href="./">M</a><br>Returns an immutable <a href="../">Message</a> based on the fields that set in this builder.<br>[js, jvm, native]<br>[js, jvm, native]<br>abstract fun <a href="build/">build</a>(): <a href="./">M</a></td>
 </tr>
 <tr>
 <td><a href="build-unknown-fields/">buildUnknownFields</a></td>
-<td>[jvm]<br>fun <a href="build-unknown-fields/">buildUnknownFields</a>(): ByteString<br>Returns a byte string with this message&rsquo;s unknown fields. Returns an empty byte string if this message has no unknown fields.</td>
+<td>[common]<br>fun <a href="build-unknown-fields/">buildUnknownFields</a>(): &lt;ERROR CLASS&gt;<br>Returns a byte string with this message&rsquo;s unknown fields. Returns an empty byte string if this message has no unknown fields.<br>[js, jvm, native]<br>[js, jvm, native]<br>fun <a href="build-unknown-fields/">buildUnknownFields</a>(): &lt;ERROR CLASS&gt;</td>
 </tr>
 <tr>
 <td><a href="clear-unknown-fields/">clearUnknownFields</a></td>
-<td>[jvm]<br>fun <a href="clear-unknown-fields/">clearUnknownFields</a>(): <a href="./">Message.Builder</a>&lt;<a href="./">M</a>, <a href="./">B</a>&gt;</td>
+<td>[common, js, jvm, native]<br>[common, js, jvm, native]<br>fun <a href="clear-unknown-fields/">clearUnknownFields</a>(): <a href="./">Message.Builder</a>&lt;<a href="./">M</a>, <a href="./">B</a>&gt;</td>
 </tr>
 </tbody>
 </table>

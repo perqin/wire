@@ -633,7 +633,6 @@
 fun <a href="./">encode</a>(stream: <a href="https://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html">OutputStream</a>, value: <a href="../">E</a>)</p>
 <p>abstract fun <a href="./">encode</a>(writer: ProtoWriter, value: <a href="../">E</a>)</p>
 <p>open fun <a href="./">encode</a>(writer: ReverseProtoWriter, value: <a href="../">E</a>)</p>
-<p>fun <a href="./">encode</a>(sink: BufferedSink, value: <a href="../">E</a>)</p>
 <p>fun <a href="./">encode</a>(value: <a href="../">E</a>): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a></p>
 <p>[common, js, native]\
 [common]\
@@ -645,9 +644,9 @@ open fun <a href="./">encode</a>(writer: <a href="../../-reverse-proto-writer/">
 <p>[js, native]\
 open fun <a href="./">encode</a>(writer: ReverseProtoWriter, value: <a href="../">E</a>)</p>
 <p>Write non-null value to writer.</p>
-<p>[common, js]\
-[common, js]\
-fun <a href="./">encode</a>(sink: BufferedSink, value: <a href="../">E</a>)</p>
+<p>[common, js, native]\
+[common, js, native]\
+fun <a href="./">encode</a>(sink: &lt;ERROR CLASS&gt;, value: <a href="../">E</a>)</p>
 <p>Encode value and write it to stream.</p>
 <p>[common, js, native]\
 [common, js, native]\

@@ -26,7 +26,7 @@ $dokka.location:com.squareup.wire.schema/JavaTarget/includes/#/PointingToDeclara
 $dokka.location:com.squareup.wire.schema/JavaTarget/newHandler/#/PointingToDeclaration/wire-compiler/com.squareup.wire.schema/-java-target/new-handler.md
 $dokka.location:com.squareup.wire.schema/JavaTarget/outDirectory/#/PointingToDeclaration/wire-compiler/com.squareup.wire.schema/-java-target/out-directory.md
 $dokka.location:com.squareup.wire.schema/KotlinTarget///PointingToDeclaration/wire-compiler/com.squareup.wire.schema/-kotlin-target/index.md
-$dokka.location:com.squareup.wire.schema/KotlinTarget/KotlinTarget/#kotlin.collections.List[kotlin.String]#kotlin.collections.List[kotlin.String]#kotlin.Boolean#kotlin.String#kotlin.Boolean#kotlin.Boolean#kotlin.Boolean#kotlin.Boolean#com.squareup.wire.kotlin.RpcCallStyle#com.squareup.wire.kotlin.RpcRole#kotlin.Boolean#kotlin.Int#kotlin.Boolean#kotlin.String?#kotlin.Boolean/PointingToDeclaration/wire-compiler/com.squareup.wire.schema/-kotlin-target/-kotlin-target.md
+$dokka.location:com.squareup.wire.schema/KotlinTarget/KotlinTarget/#kotlin.collections.List[kotlin.String]#kotlin.collections.List[kotlin.String]#kotlin.Boolean#kotlin.String#kotlin.Boolean#kotlin.Boolean#kotlin.Boolean#kotlin.Boolean#com.squareup.wire.kotlin.RpcCallStyle#com.squareup.wire.kotlin.RpcRole#kotlin.Boolean#kotlin.Int#kotlin.Boolean#kotlin.String?#kotlin.Boolean#kotlin.Boolean/PointingToDeclaration/wire-compiler/com.squareup.wire.schema/-kotlin-target/-kotlin-target.md
 $dokka.location:com.squareup.wire.schema/KotlinTarget/android/#/PointingToDeclaration/wire-compiler/com.squareup.wire.schema/-kotlin-target/android.md
 $dokka.location:com.squareup.wire.schema/KotlinTarget/boxOneOfsMinSize/#/PointingToDeclaration/wire-compiler/com.squareup.wire.schema/-kotlin-target/box-one-ofs-min-size.md
 $dokka.location:com.squareup.wire.schema/KotlinTarget/buildersOnly/#/PointingToDeclaration/wire-compiler/com.squareup.wire.schema/-kotlin-target/builders-only.md
@@ -38,6 +38,7 @@ $dokka.location:com.squareup.wire.schema/KotlinTarget/exclusive/#/PointingToDecl
 $dokka.location:com.squareup.wire.schema/KotlinTarget/grpcServerCompatible/#/PointingToDeclaration/wire-compiler/com.squareup.wire.schema/-kotlin-target/grpc-server-compatible.md
 $dokka.location:com.squareup.wire.schema/KotlinTarget/includes/#/PointingToDeclaration/wire-compiler/com.squareup.wire.schema/-kotlin-target/includes.md
 $dokka.location:com.squareup.wire.schema/KotlinTarget/javaInterop/#/PointingToDeclaration/wire-compiler/com.squareup.wire.schema/-kotlin-target/java-interop.md
+$dokka.location:com.squareup.wire.schema/KotlinTarget/jvmOnly/#/PointingToDeclaration/wire-compiler/com.squareup.wire.schema/-kotlin-target/jvm-only.md
 $dokka.location:com.squareup.wire.schema/KotlinTarget/nameSuffix/#/PointingToDeclaration/wire-compiler/com.squareup.wire.schema/-kotlin-target/name-suffix.md
 $dokka.location:com.squareup.wire.schema/KotlinTarget/newHandler/#/PointingToDeclaration/wire-compiler/com.squareup.wire.schema/-kotlin-target/new-handler.md
 $dokka.location:com.squareup.wire.schema/KotlinTarget/outDirectory/#/PointingToDeclaration/wire-compiler/com.squareup.wire.schema/-kotlin-target/out-directory.md

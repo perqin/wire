@@ -701,11 +701,11 @@ abstract class <a href="./">Message</a>&lt;<a href="./">M</a> : <a href="./">Mes
 <tbody>
 <tr>
 <td><a href="encode/">encode</a></td>
-<td>[common, js, jvm, native]<br>[common, js, jvm, native]<br>fun <a href="encode/">encode</a>(): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a><br>Encode this message as a byte[].<br>[jvm, common, js]<br>[jvm]<br>fun <a href="encode/">encode</a>(stream: <a href="https://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html">OutputStream</a>)<br>[common, js, jvm]<br>fun <a href="encode/">encode</a>(sink: BufferedSink)<br>Encode this message and write it to stream.</td>
+<td>[common, js, jvm, native]<br>[common, js, jvm, native]<br>fun <a href="encode/">encode</a>(): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a><br>Encode this message as a byte[].<br>[common, js, native, jvm]<br>[common, js, native]<br>fun <a href="encode/">encode</a>(sink: &lt;ERROR CLASS&gt;)<br>[jvm]<br>fun <a href="encode/">encode</a>(stream: <a href="https://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html">OutputStream</a>)<br>Encode this message and write it to stream.</td>
 </tr>
 <tr>
 <td><a href="encode-byte-string/">encodeByteString</a></td>
-<td>[common, js, jvm, native]<br>[common, js, jvm, native]<br>fun <a href="encode-byte-string/">encodeByteString</a>(): ByteString<br>Encode this message as a ByteString.</td>
+<td>[common, js, jvm, native]<br>[common, js, jvm, native]<br>fun <a href="encode-byte-string/">encodeByteString</a>(): &lt;ERROR CLASS&gt;<br>Encode this message as a ByteString.</td>
 </tr>
 <tr>
 <td><a href="new-builder/">newBuilder</a></td>
@@ -736,7 +736,7 @@ abstract class <a href="./">Message</a>&lt;<a href="./">M</a> : <a href="./">Mes
 </tr>
 <tr>
 <td><a href="unknown-fields/">unknownFields</a></td>
-<td>[common, js, native]<br>val <a href="unknown-fields/">unknownFields</a>: ByteString<br>Returns a byte string containing the proto encoding of this message&rsquo;s unknown fields. Returns an empty byte string if this message has no unknown fields.<br>[jvm]<br>@<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-transient/index.html">Transient</a><br>@get:<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-name/index.html">JvmName</a>(name = &ldquo;unknownFields&rdquo;)<br>val <a href="unknown-fields/">unknownFields</a>: ByteString<br>Returns a byte string containing the proto encoding of this message&rsquo;s unknown fields. Returns an empty byte string if this message has no unknown fields.</td>
+<td>[common, js, native]<br>val <a href="unknown-fields/">unknownFields</a>: &lt;ERROR CLASS&gt;<br>Returns a byte string containing the proto encoding of this message&rsquo;s unknown fields. Returns an empty byte string if this message has no unknown fields.<br>[jvm]<br>@<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-transient/index.html">Transient</a><br>@get:<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-name/index.html">JvmName</a>(name = &ldquo;unknownFields&rdquo;)<br>val <a href="unknown-fields/">unknownFields</a>: &lt;ERROR CLASS&gt;<br>Returns a byte string containing the proto encoding of this message&rsquo;s unknown fields. Returns an empty byte string if this message has no unknown fields.</td>
 </tr>
 </tbody>
 </table>

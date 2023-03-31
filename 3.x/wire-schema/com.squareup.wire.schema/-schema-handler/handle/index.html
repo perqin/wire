@@ -633,13 +633,13 @@
 open fun <a href="./">handle</a>(schema: <a href="../../-schema/">Schema</a>, context: <a href="../-context/">SchemaHandler.Context</a>)</p>
 <p>This will handle all <a href="../../-proto-file/">ProtoFile</a>s which are part of the sourcePath. If a <a href="../-module/">Module</a> is set in the <a href="./">context</a>, it will handle only <a href="../../-type/">Type</a>s and <a href="../../-service/">Service</a>s the module defines respecting the <a href="./">context</a> rules. Override this method if you have specific needs the default implementation doesn&rsquo;t address.</p>
 <p>[common]\
-abstract fun <a href="./">handle</a>(type: <a href="../../-type/">Type</a>, context: <a href="../-context/">SchemaHandler.Context</a>): Path?</p>
+abstract fun <a href="./">handle</a>(type: <a href="../../-type/">Type</a>, context: <a href="../-context/">SchemaHandler.Context</a>): &lt;ERROR CLASS&gt;?</p>
 <p>Returns the Path of the file which <a href="./">type</a> will have been generated into. Null if nothing has been generated.</p>
 <p>[common]\
-abstract fun <a href="./">handle</a>(service: <a href="../../-service/">Service</a>, context: <a href="../-context/">SchemaHandler.Context</a>): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a>&lt;Path&gt;</p>
+abstract fun <a href="./">handle</a>(service: <a href="../../-service/">Service</a>, context: <a href="../-context/">SchemaHandler.Context</a>): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a>&lt;&lt;ERROR CLASS&gt;&gt;</p>
 <p>Returns the Paths of the files which <a href="./">service</a> will have been generated into. Null if nothing has been generated.</p>
 <p>[common]\
-abstract fun <a href="./">handle</a>(extend: <a href="../../-extend/">Extend</a>, field: <a href="../../-field/">Field</a>, context: <a href="../-context/">SchemaHandler.Context</a>): Path?</p>
+abstract fun <a href="./">handle</a>(extend: <a href="../../-extend/">Extend</a>, field: <a href="../../-field/">Field</a>, context: <a href="../-context/">SchemaHandler.Context</a>): &lt;ERROR CLASS&gt;?</p>
 <p>Returns the Path of the files which <a href="./">field</a> will have been generated into. Null if nothing has been generated.</p>
 
 
