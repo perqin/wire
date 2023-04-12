@@ -182,6 +182,7 @@ $dokka.location:com.squareup.wire/ProtoReader/addUnknownField/#kotlin.Int#com.sq
 $dokka.location:com.squareup.wire/ProtoReader/beginMessage/#/PointingToDeclaration/wire-runtime/com.squareup.wire/-proto-reader/begin-message.md
 $dokka.location:com.squareup.wire/ProtoReader/endMessageAndGetUnknownFields/#kotlin.Long/PointingToDeclaration/wire-runtime/com.squareup.wire/-proto-reader/end-message-and-get-unknown-fields.md
 $dokka.location:com.squareup.wire/ProtoReader/forEachTag/#kotlin.Function1[kotlin.Int,kotlin.Any]/PointingToDeclaration/wire-runtime/com.squareup.wire/-proto-reader/for-each-tag.md
+$dokka.location:com.squareup.wire/ProtoReader/nextFieldMinLengthInBytes/#/PointingToDeclaration/wire-runtime/com.squareup.wire/-proto-reader/next-field-min-length-in-bytes.md
 $dokka.location:com.squareup.wire/ProtoReader/nextTag/#/PointingToDeclaration/wire-runtime/com.squareup.wire/-proto-reader/next-tag.md
 $dokka.location:com.squareup.wire/ProtoReader/peekFieldEncoding/#/PointingToDeclaration/wire-runtime/com.squareup.wire/-proto-reader/peek-field-encoding.md
 $dokka.location:com.squareup.wire/ProtoReader/readBytes/#/PointingToDeclaration/wire-runtime/com.squareup.wire/-proto-reader/read-bytes.md
