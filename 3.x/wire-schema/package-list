@@ -386,6 +386,7 @@ $dokka.location:com.squareup.wire.schema/Field/retainAll/#com.squareup.wire.sche
 $dokka.location:com.squareup.wire.schema/Field/tag/#/PointingToDeclaration/wire-schema/com.squareup.wire.schema/-field/tag.md
 $dokka.location:com.squareup.wire.schema/Field/toString/#/PointingToDeclaration/wire-schema/com.squareup.wire.schema/-field/to-string.md
 $dokka.location:com.squareup.wire.schema/Field/type/#/PointingToDeclaration/wire-schema/com.squareup.wire.schema/-field/type.md
+$dokka.location:com.squareup.wire.schema/Field/useArray/#/PointingToDeclaration/wire-schema/com.squareup.wire.schema/-field/use-array.md
 $dokka.location:com.squareup.wire.schema/Field/validate/#com.squareup.wire.schema.Linker#com.squareup.wire.schema.SyntaxRules/PointingToDeclaration/wire-schema/com.squareup.wire.schema/-field/validate.md
 $dokka.location:com.squareup.wire.schema/LinkedOptionEntry///PointingToDeclaration/wire-schema/com.squareup.wire.schema/-linked-option-entry/index.md
 $dokka.location:com.squareup.wire.schema/LinkedOptionEntry/LinkedOptionEntry/#com.squareup.wire.schema.internal.parser.OptionElement#com.squareup.wire.schema.ProtoMember#kotlin.Any?/PointingToDeclaration/wire-schema/com.squareup.wire.schema/-linked-option-entry/-linked-option-entry.md

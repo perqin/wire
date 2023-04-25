@@ -576,6 +576,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#version-456" class="md-nav__link">
+    Version 4.5.6
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#version-455" class="md-nav__link">
     Version 4.5.5
   </a>
@@ -1197,6 +1204,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#version-456" class="md-nav__link">
+    Version 4.5.6
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#version-455" class="md-nav__link">
     Version 4.5.5
   </a>
@@ -1758,6 +1772,14 @@
 
 
 <h1 id="change-log">Change Log<a class="headerlink" href="#change-log" title="Permanent link">&para;</a></h1>
+<h2 id="version-456">Version 4.5.6<a class="headerlink" href="#version-456" title="Permanent link">&para;</a></h2>
+<p><em>2023-04-25</em></p>
+<ul>
+<li>Fix: JSON serialization is now bullet-proofed against <code>Class.getDeclaredFields</code> random ordering.</li>
+<li>Perf: Add option <code>wire.use_array</code> to use primitive arrays for packed scalars. This should improve
+  performances as it avoids autoboxing on the JVM. It will use the appropriate array type, for
+  example <code>repeated float</code> would be represented as a <code>FloatArray</code>.</li>
+</ul>
 <h2 id="version-455">Version 4.5.5<a class="headerlink" href="#version-455" title="Permanent link">&para;</a></h2>
 <p><em>2023-04-12</em></p>
 <ul>
