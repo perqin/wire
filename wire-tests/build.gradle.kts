@@ -12,7 +12,8 @@ kotlin {
       defaultSourceSet {
         kotlin.srcDir("src/jvmKotlinInteropTest/proto-kotlin")
         dependencies {
-          implementation(compilations["main"].compileDependencyFiles)
+          // implementation(compilations["main"].compileDependencyFiles)
+          implementation(projects.wireRuntime)
           implementation(libs.kotlin.test.junit)
           implementation(libs.assertj)
           implementation(libs.kotlin.reflect)
@@ -30,7 +31,8 @@ kotlin {
       defaultSourceSet {
         kotlin.srcDir("src/jvmKotlinAndroidTest/proto-kotlin")
         dependencies {
-          implementation(compilations["main"].compileDependencyFiles)
+          // implementation(compilations["main"].compileDependencyFiles)
+          implementation(projects.wireRuntime)
           compileOnly(libs.android)
           implementation(libs.kotlin.test.junit)
           implementation(libs.assertj)
