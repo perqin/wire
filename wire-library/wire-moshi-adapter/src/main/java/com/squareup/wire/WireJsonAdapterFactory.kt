@@ -75,7 +75,7 @@ class WireJsonAdapterFactory private constructor(
       annotations.isNotEmpty() -> null
       rawType == AnyMessage::class.java -> AnyMessageJsonAdapter(moshi, typeUrlToAdapter)
       Message::class.java.isAssignableFrom(rawType) -> {
-        val messageAdapter = createRuntimeMessageAdapter<Nothing, Nothing>(type as Class<Nothing>)
+        val messageAdapter = createRuntimeMessageAdapter<Nothing, Nothing>(type as Class<Nothing>, false)
         val jsonAdapters = MoshiJsonIntegration.jsonAdapters(messageAdapter, moshi)
         val redactedFieldsAdapter = moshi.adapter<List<String>>(
             Types.newParameterizedType(List::class.java, String::class.java))

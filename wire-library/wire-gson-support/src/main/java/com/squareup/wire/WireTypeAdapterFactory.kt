@@ -74,7 +74,7 @@ class WireTypeAdapterFactory(
     return when {
       rawType == AnyMessage::class.java -> AnyMessageTypeAdapter(gson, typeUrlToAdapter) as TypeAdapter<T>
       Message::class.java.isAssignableFrom(rawType) -> {
-        val messageAdapter = createRuntimeMessageAdapter<Nothing, Nothing>(rawType as Class<Nothing>)
+        val messageAdapter = createRuntimeMessageAdapter<Nothing, Nothing>(rawType as Class<Nothing>, false)
         val jsonAdapters = GsonJsonIntegration.jsonAdapters(messageAdapter, gson)
         MessageTypeAdapter(messageAdapter, jsonAdapters).nullSafe() as TypeAdapter<T>
       }
